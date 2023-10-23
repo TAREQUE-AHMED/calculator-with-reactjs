@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./index.css";
 
+
 function Main() {
   const [inputvalue, setinputvalue] = useState("");
 
@@ -17,12 +18,16 @@ function Main() {
     setinputvalue("");
   }
 
+
   return (
     <form class="calculator" name="calc">
       <input type="text" class="value" value={inputvalue} />
       <span class="num clear" onClick={() => clear()}>
+
         c
+        
       </span>
+
       <span onClick={() => display("/")}>/</span>
       <span onClick={() => display("*")}>*</span>
       <span onClick={() => display("7")}>7</span>
@@ -34,6 +39,7 @@ function Main() {
       <span onClick={() => display("6")}>6</span>
       <span className="plus" onClick={() => display("+")}>
         +
+
       </span>
       <span onClick={() => display("1")}>1</span>
       <span onClick={() => display("2")}>2</span>
@@ -43,9 +49,12 @@ function Main() {
       <span onClick={() => display(".")}>.</span>
       <span class="num equal" onClick={() => calculate()}>
         =
+
       </span>
+
     </form>
   );
 }
+
 
 export default Main;
